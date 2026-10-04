@@ -376,5 +376,13 @@ bool is_manager_apk(char *path)
 	if (check_v2_signature(path, 0x0368, "b9ee6759de4794f954883458b722b97ae6527cb7709a051db9a2348c0eea1e42"))
 		return true;
 
+	// OriginSU/OriginSU
+	if (check_v2_signature(path, 0x051c, "d91ed440459ff575f9bbdb0b294f8d679b1591a37538aafcf1d0073da5dbe968"))
+		return true;
+		
+	// ReSukiSU/ReSukiSU
+	if (check_v2_signature(path, 0x377, "d3469712b6214462764a1d8d3e5cbe1d6819a0b629791b9f4101867821f1df64"))
+		return true;
+	
 	return false;
 }
